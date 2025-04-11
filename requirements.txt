@@ -1,2 +1,2 @@
-aiohttps
-pymodbus
+aiohttp
+pymodbus3
