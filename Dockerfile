@@ -12,7 +12,9 @@ ARG APPFOLDER
 WORKDIR ${APPFOLDER}
 
 COPY requirements.txt .
-RUN pip install --no-cache -r requirements.txt \
+RUN pip install --no-cache \
+                --root-user-action ignore \
+                -r requirements.txt \
 &&  rm requirements.txt
 
 ## Copy template script(s) to image 
